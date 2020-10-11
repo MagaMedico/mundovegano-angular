@@ -1,0 +1,35 @@
+<h1>Tabla de productos veganos: </h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Imagen</th>
+            <th>Nombre</th>
+            <th>Tipo</th>
+            <th>Calorias</th>
+            <th>Valor nutricional</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><img [src]="products.image" [alt]="products.name"></td>
+            <td>{{products.name}}</td>
+            <td>{{products.type}}</td>
+            <td>{{products.calories}}</td>
+            <td>{{products.nutritional}}</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Palta</td>
+            <td>Verdura</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Alfalfa</td>
+            <td>Verdura</td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>

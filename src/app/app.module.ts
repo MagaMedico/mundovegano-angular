@@ -3,10 +3,14 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { VeganListComponent } from './vegan-list/vegan-list.component';
+import { VeganDietComponent } from './vegan-diet/vegan-diet.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    VeganListComponent,
+    VeganDietComponent
   ],
   imports: [
     BrowserModule,
