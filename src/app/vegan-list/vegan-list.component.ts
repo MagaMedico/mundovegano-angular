@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Products } from './Products'
 
 @Component({
   selector: 'app-vegan-list',
@@ -7,14 +8,33 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VeganListComponent implements OnInit {
 
-  products = {
-    "name":"Tofu",
-    "type":"Proteina",
-    "calories":76,
-    "nutritional":15,
-    "image": "assets/img/tofu.jpg"
-  }
-
+  products: Products[] = [
+    {
+      "name":"Tofu",
+      "type":"Proteina",
+      "price":100,
+      "stock":10,
+      "image": "assets/img/tofu.jpg",
+      "clearance": false,
+    },
+    {
+      "name":"Milas de Soja",
+      "type":"Proteina",
+      "price":200,
+      "stock":5,
+      "image": "assets/img/tofu.jpg",
+      "clearance": true,
+    },
+    {
+      "name":"Hummus",
+      "type":"Proteina",
+      "price":300,
+      "stock":0,
+      "image": "assets/img/tofu.jpg",
+      "clearance": false,
+    }  
+  ];
+  
   constructor() { }
 
   ngOnInit(): void {
