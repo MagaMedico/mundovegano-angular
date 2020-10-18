@@ -1,9 +1,20 @@
 img{
     width: 70px;
     height: auto;
+    border: 2px solid white;
 }
 
 .clearance{
     border: 2px solid green;
     background-color: lightgreen;
+}
+
+input{
+    width:50px;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
 }
