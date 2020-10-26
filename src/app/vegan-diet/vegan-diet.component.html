@@ -1,7 +1,6 @@
 <h2>Dieta de hoy: </h2>
 <ul class="list-group">
-    <li class="list-group-item">Tofu</li>
-    <li class="list-group-item">Palta</li>
-    <li class="list-group-item">Acelga</li>
-    <li class="list-group-item">Porotos</li>
-  </ul>
+    <li class="list-group-item" *ngFor="let product of (shopList$ | async)">
+      {{product.name}}: {{product.quantity}}
+    </li>
+</ul>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductCartService } from '../product-cart.service';
 import { Products } from './Products'
 
 @Component({
@@ -38,33 +39,18 @@ export class VeganListComponent implements OnInit {
     }  
   ];
   
-  constructor() { }
+  constructor(private cart: ProductCartService) { }
 
   ngOnInit(): void {
   }
 
-  upQuantity(product: Products): void{
-    if(product.quantity<product.stock)
-    product.quantity++;
+  addToDiet(product):void{
+    this.cart.addToDiet(product);
+    product.stock -= product.quantity;
+    product.quantity = 0;
   }
 
-  downQuantity(product: Products): void{
-    if(product.quantity>0)
-      product.quantity--;
+  maxReached(m: number){
+    alert(m);
   }
-
-  changeQuantity(event, product: Products): void{
-    if(event.target.value < 0){
-      event.target.value=event.target.value*(-1);;
-      product.quantity=event.target.value;
-    }
-    if(event.target.value > product.stock){
-      product.quantity=product.stock;
-    }
-    if(event.target.value%1!=0){
-      event.target.value=parseInt(event.target.value, 10);
-      product.quantity=event.target.value;
-    }
-  }
-
 }

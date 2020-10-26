@@ -18,13 +18,10 @@
             <td>{{product.price|currency}}</td>
             <td><span class="badge badge-warning" *ngIf="product.stock==0">SIN STOCK</span></td>
             <td>
-                <span *ngIf="product.stock>0">
-                <button class="btn btn-secondary btn-sm" (click)="downQuantity(product)">-</button>
-                <input class="smallInput" type="number" 
-                    [(ngModel)]="product.quantity"
-                    (keyup)="changeQuantity($event, product)">
-                <button class="btn btn-secondary btn-sm" (click)="upQuantity(product)">+</button>
-                </span>
+                <app-input-number [(quantity)]="product.quantity" 
+                [max]="product.stock" *ngIf="product.stock>0"
+                (maxReached)="maxReached($event)"></app-input-number>
+                <button *ngIf="product.stock>0" class="btn" (click)="addToDiet(product)">Agregar</button>
             </td>
         </tr>
     </tbody>

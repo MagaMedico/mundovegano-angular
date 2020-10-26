@@ -9,6 +9,7 @@ import { VeganDietComponent } from './vegan-diet/vegan-diet.component';
 import { FormsModule } from '@angular/forms';
 import { VeganAboutComponent } from './vegan-about/vegan-about.component';
 import { VeganHomeComponent } from './vegan-home/vegan-home.component';
+import { InputNumberComponent } from './input-number/input-number.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { VeganHomeComponent } from './vegan-home/vegan-home.component';
     VeganListComponent,
     VeganDietComponent,
     VeganAboutComponent,
-    VeganHomeComponent
+    VeganHomeComponent,
+    InputNumberComponent
   ],
   imports: [
     BrowserModule,
