@@ -24,7 +24,7 @@ export class VeganListComponent implements OnInit {
       "type":"Proteina",
       "price":200,
       "stock":5,
-      "image": "assets/img/tofu.jpg",
+      "image": "assets/img/milas.jpg",
       "clearance": true,
       "quantity": 0,
     },
@@ -33,7 +33,7 @@ export class VeganListComponent implements OnInit {
       "type":"Proteina",
       "price":300,
       "stock":0,
-      "image": "assets/img/tofu.jpg",
+      "image": "assets/img/hummus.jpg",
       "clearance": false,
       "quantity": 0,
     }  
